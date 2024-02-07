@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        div a{
+            text-decoration: none;
+            font-size: 25px;
+            color: #333;
+            font-weight:400;
+            padding: 6px 20px;
+            transition: 0.5s;
+            position: relative;
+        }
+        div a:hover{
+            color: #0ef;
+        }
+        div a span{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-bottom: 2px solid #0ef;
+            border-radius: 15px;
+            transform: scale(0) translate Y(50px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+        div a:hover span{
+            transform: scale(1) translate Y(0);
+            opacity: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <a href="#">Home <span></span></a>
+        <a href="#">About <span></span></a>
+        <a href="#">Services <span></span></a>
+        <a href="#">Contact <span></span></a>
+        <a href="#">Help <span></span></a>
+    </div>
+</body>
+</html>
